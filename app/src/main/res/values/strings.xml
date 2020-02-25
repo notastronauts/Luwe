@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FingerPrnt</string>
+    <!--    Start Activity -->
+    <string name="welcome">Welcome</string>
+    <string name="register_to_continue">Register to continue</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="or_already_have_an_account">Or already have an account?</string>
+    <string name="sign_in">Sign In</string>
+
+    <!-- Sign in Activity-->
+    <string name="welcome_back">Hello, Welcome Back!</string>
+    <string name="sign_in_with_credential">Or Sign in with your credentials</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="sign_in_with_google">Sign in with google</string>
+    <string name="your_email">Your Email</string>
+    <string name="your_password">Your Password</string>
+</resources>
