@@ -11,7 +11,7 @@ public class ServiceClient {
             .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .build();
     public static ServiceRepository buildServiceClient() {
-        return builder.baseUrl("127.0.0.1:8000")
+        return builder.baseUrl("http://192.168.100.49:8000")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build()
