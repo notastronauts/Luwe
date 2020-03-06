@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.sunflower.fingerprnt.R;
+
 public class CreateNewPassword extends AppCompatActivity {
 
     @Override

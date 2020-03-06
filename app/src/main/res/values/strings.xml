@@ -15,4 +15,19 @@
     <string name="sign_in_with_google">Sign in with google</string>
     <string name="your_email">Your Email</string>
     <string name="your_password">Your Password</string>
+    <!-- Sign up Activity -->
+    <string name="please_sign_up">Please, sign up to continue</string>
+    <string name="sign_up_with_google">Sign up with google</string>
+    <string name="sign_up_with_email">Or sign up with email</string>
+    <string name="repeat_password">Repeat password</string>
+    <!-- Verify Email Activity -->
+    <string name="please_enter_verification_code">Please enter the verification code we sent to your email address </string>
+    <string name="verify">Verify</string>
+    <!-- Forgot Password -->
+    <string name="please_enter_email_address">Please enter your email address, we will send the verification code</string>
+    <string name="send_verification_code">Send Verification Code</string>
+    <!-- Create New Password -->
+    <string name="create_new_password">Create a new password</string>
+    <string name="your_new_password">Your new password</string>
+    <string name="ok">OK</string>
 </resources>
