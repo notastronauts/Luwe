@@ -34,7 +34,9 @@ public class Signin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        isLoggedIn(UserPreferences.isLogin(Signin.this));
         setContentView(R.layout.activity_signin);
+        Log.d("IsLoggedIn", Boolean.toString(UserPreferences.isLogin(Signin.this)));
 
         initiateIDs();
 
@@ -82,6 +84,11 @@ public class Signin extends AppCompatActivity {
         loading = findViewById(R.id.loading);
     }
 
+    /**
+     * Action Login
+     * @param user_email
+     * @param user_password
+     */
     public void processLogin(final String user_email, String user_password) {
         loading.setVisibility(View.VISIBLE);
 
@@ -99,16 +106,16 @@ public class Signin extends AppCompatActivity {
                     public void onResponse(Call<AuthorizationResponse> call, Response<AuthorizationResponse> response) {
                         if (response.isSuccessful()) {
                             AuthorizationResponse authorizationResponse = response.body();
-
                             UserPreferences.setTokenUser(Signin.this, authorizationResponse.getSuccess().getToken());
                             UserPreferences.hasLogin(Signin.this);
                             loading.setVisibility(View.GONE);
-                            Log.d("Auth", UserPreferences.getTokeUser(Signin.this));
+                            Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                            startActivity(intent);
+                            finish();
                         }
                         else {
                             password_container.setError("Wrong username or password");
                             Log.d("OnResponse", "OnResponse " + response.message());
-
                             loading.setVisibility(View.GONE);
                             email.setEnabled(true);
                             passsword.setEnabled(true);
@@ -127,5 +134,16 @@ public class Signin extends AppCompatActivity {
                         sign_in.setEnabled(true);
                     }
                 });
+    }
+
+    /**
+     * Check login status
+     * @param isLoggedIn
+     */
+    public void isLoggedIn(boolean isLoggedIn) {
+        if (isLoggedIn) {
+            startActivity(new Intent(getApplicationContext(), Dashboard.class));
+            finish();
+        }
     }
 }

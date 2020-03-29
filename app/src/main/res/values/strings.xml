@@ -19,7 +19,10 @@
     <string name="please_sign_up">Please, sign up to continue</string>
     <string name="sign_up_with_google">Sign up with google</string>
     <string name="sign_up_with_email">Or sign up with email</string>
+    <string name="sign_up_with_phone_number">Or sign up with phone number</string>
     <string name="repeat_password">Repeat password</string>
+    <string name="your_name">Your Name</string>
+    <string name="eg_phone_number">123456789</string>
     <!-- Verify Email Activity -->
     <string name="please_enter_verification_code">Please enter the verification code we sent to your email address </string>
     <string name="verify">Verify</string>

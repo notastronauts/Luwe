@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 import com.sunflower.fingerprnt.R;
+import com.sunflower.fingerprnt.common.UserPreferences;
 
 public class Welcome extends AppCompatActivity {
     private MaterialButton sign_in, sign_up;
@@ -15,12 +16,11 @@ public class Welcome extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        isLoggedIn(UserPreferences.isLogin(Welcome.this));
         getSupportActionBar().hide();
         setContentView(R.layout.activity_welcome);
 
-        // Initialize IDs from the context
-        sign_in = findViewById(R.id.sign_in);
-        sign_up = findViewById(R.id.sign_up);
+        initiateIDs();
 
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,5 +35,24 @@ public class Welcome extends AppCompatActivity {
                 startActivity((new Intent(Welcome.this, Signup.class)));
             }
         });
+    }
+
+    /**
+     * Initiate IDs
+     */
+    public void initiateIDs () {
+        sign_in = findViewById(R.id.sign_in);
+        sign_up = findViewById(R.id.sign_up);
+    }
+
+    /**
+     * Check login status
+     * @param hasLogin
+     */
+    public void isLoggedIn (boolean hasLogin) {
+        if (hasLogin) {
+            startActivity(new Intent(Welcome.this, Dashboard.class));
+            finish();
+        }
     }
 }

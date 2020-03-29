@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sunflower.fingerprnt">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.CreateNewPassword"></activity>
+        <activity android:name=".activities.Dashboard"></activity>
+        <activity android:name=".activities.CreateNewPassword" />
         <activity android:name=".activities.ForgotPassword" />
         <activity android:name=".activities.VerifyEmail" />
         <activity android:name=".activities.Signup" />

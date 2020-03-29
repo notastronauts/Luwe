@@ -2,13 +2,12 @@ package com.sunflower.fingerprnt.common;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 
 public class UserPreferences {
     private static SharedPreferences preferences;
 
     public static boolean isLogin(Context context) {
-        preferences = context.getSharedPreferences("UserPrefeerences", Context.MODE_PRIVATE);
+        preferences = context.getSharedPreferences("UserPreferences", Context.MODE_PRIVATE);
         return preferences.getBoolean("login", false);
     }
 
@@ -24,7 +23,7 @@ public class UserPreferences {
         editor.clear().apply();
     }
 
-    public static String getTokeUser(Context context) {
+    public static String getTokenUser(Context context) {
         preferences = context.getSharedPreferences("UserPreferences", Context.MODE_PRIVATE);
         return preferences.getString("token", "");
     }
