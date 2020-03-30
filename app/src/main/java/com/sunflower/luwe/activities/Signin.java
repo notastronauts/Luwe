@@ -1,4 +1,4 @@
-package com.sunflower.fingerprnt.activities;
+package com.sunflower.luwe.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,12 +13,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import com.sunflower.fingerprnt.R;
-import com.sunflower.fingerprnt.common.UserPreferences;
-import com.sunflower.fingerprnt.common.Utils;
-import com.sunflower.fingerprnt.model.AuthorizationResponse;
-import com.sunflower.fingerprnt.model.Credentials;
-import com.sunflower.fingerprnt.network.ServiceClient;
+import com.sunflower.luwe.R;
+import com.sunflower.luwe.common.UserPreferences;
+import com.sunflower.luwe.common.Utils;
+import com.sunflower.luwe.model.AuthorizationResponse;
+import com.sunflower.luwe.model.Credentials;
+import com.sunflower.luwe.network.ServiceClient;
 
 import retrofit2.Call;
 import retrofit2.Callback;

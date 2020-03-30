@@ -23,6 +23,7 @@
     <string name="repeat_password">Repeat password</string>
     <string name="your_name">Your Name</string>
     <string name="eg_phone_number">123456789</string>
+    <string name="next">Next</string>
     <!-- Verify Email Activity -->
     <string name="please_enter_verification_code">Please enter the verification code we sent to your email address </string>
     <string name="verify">Verify</string>

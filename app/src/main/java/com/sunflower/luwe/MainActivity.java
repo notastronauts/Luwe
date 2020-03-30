@@ -1,4 +1,4 @@
-package com.sunflower.fingerprnt;
+package com.sunflower.luwe;
 
 import android.os.Bundle;
 

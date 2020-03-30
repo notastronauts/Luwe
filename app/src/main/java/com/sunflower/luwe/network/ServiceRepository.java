@@ -1,9 +1,11 @@
-package com.sunflower.fingerprnt.network;
+package com.sunflower.luwe.network;
 
 
-import com.sunflower.fingerprnt.model.AuthorizationResponse;
-import com.sunflower.fingerprnt.model.Credentials;
-import com.sunflower.fingerprnt.model.UserResponse;
+import com.sunflower.luwe.model.AuthorizationResponse;
+import com.sunflower.luwe.model.Credentials;
+import com.sunflower.luwe.model.PhoneNumber;
+import com.sunflower.luwe.model.ResponsePhoneNumberVerification;
+import com.sunflower.luwe.model.UserResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -31,4 +33,7 @@ public interface ServiceRepository {
     })
     @GET("api/user")
     Call<UserResponse> user(@Header("Authorization") String authorization);
+
+    @POST("/api/send-verification-code")
+    Call<ResponsePhoneNumberVerification> sendVerificationCode(@Body PhoneNumber phone_number);
 }

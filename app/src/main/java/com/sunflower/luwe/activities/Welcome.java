@@ -1,4 +1,4 @@
-package com.sunflower.fingerprnt.activities;
+package com.sunflower.luwe.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
-import com.sunflower.fingerprnt.R;
-import com.sunflower.fingerprnt.common.UserPreferences;
+import com.sunflower.luwe.R;
+import com.sunflower.luwe.common.UserPreferences;
 
 public class Welcome extends AppCompatActivity {
     private MaterialButton sign_in, sign_up;

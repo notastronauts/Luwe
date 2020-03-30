@@ -1,4 +1,4 @@
-package com.sunflower.fingerprnt.model;
+package com.sunflower.luwe.model;
 
 public class AuthorizationResponse{
 	private int jsonMember0;

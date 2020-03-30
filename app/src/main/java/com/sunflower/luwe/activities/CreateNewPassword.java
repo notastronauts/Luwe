@@ -1,10 +1,10 @@
-package com.sunflower.fingerprnt.activities;
+package com.sunflower.luwe.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.sunflower.fingerprnt.R;
+import com.sunflower.luwe.R;
 
 public class CreateNewPassword extends AppCompatActivity {
 

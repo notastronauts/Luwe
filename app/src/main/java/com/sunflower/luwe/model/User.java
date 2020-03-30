@@ -1,4 +1,4 @@
-package com.sunflower.fingerprnt.model;
+package com.sunflower.luwe.model;
 
 public class User{
 	private String updatedAt;

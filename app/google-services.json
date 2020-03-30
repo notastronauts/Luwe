@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "447620098795",
+    "firebase_url": "https://luwe-776cb.firebaseio.com",
+    "project_id": "luwe-776cb",
+    "storage_bucket": "luwe-776cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447620098795:android:e8bb0bd6dd2145adfcacae",
+        "android_client_info": {
+          "package_name": "com.sunflower.luwe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447620098795-akvapt2ggjonu3c7avefepgo70knka93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8tuwlNexMkUZcx1liVzNRzX_8nydFxSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447620098795-akvapt2ggjonu3c7avefepgo70knka93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

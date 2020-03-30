@@ -1,4 +1,4 @@
-package com.sunflower.fingerprnt.common;
+package com.sunflower.luwe.common;
 
 import android.content.Context;
 import android.util.Base64;

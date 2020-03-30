@@ -1,4 +1,4 @@
-package com.sunflower.fingerprnt;
+package com.sunflower.luwe;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.sunflower.fingerprnt", appContext.getPackageName());
+        assertEquals("com.sunflower.luwe", appContext.getPackageName());
     }
 }

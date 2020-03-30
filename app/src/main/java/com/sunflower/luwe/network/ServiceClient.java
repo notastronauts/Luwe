@@ -1,4 +1,4 @@
-package com.sunflower.fingerprnt.network;
+package com.sunflower.luwe.network;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

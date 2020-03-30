@@ -1,17 +1,16 @@
-package com.sunflower.fingerprnt.activities;
+package com.sunflower.luwe.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.sunflower.fingerprnt.R;
-import com.sunflower.fingerprnt.common.UserPreferences;
-import com.sunflower.fingerprnt.network.ServiceClient;
+import com.sunflower.luwe.R;
+import com.sunflower.luwe.common.UserPreferences;
+import com.sunflower.luwe.network.ServiceClient;
 
 import retrofit2.Call;
 import retrofit2.Callback;

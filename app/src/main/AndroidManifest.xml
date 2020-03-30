@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sunflower.fingerprnt">
+    package="com.sunflower.luwe">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,13 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Dashboard"></activity>
-        <activity android:name=".activities.CreateNewPassword" />
-        <activity android:name=".activities.ForgotPassword" />
-        <activity android:name=".activities.VerifyEmail" />
-        <activity android:name=".activities.Signup" />
-        <activity android:name=".activities.Signin" />
-        <activity android:name=".activities.Welcome">
+        <activity android:name="com.sunflower.luwe.activities.Dashboard"></activity>
+        <activity android:name="com.sunflower.luwe.activities.CreateNewPassword" />
+        <activity android:name="com.sunflower.luwe.activities.ForgotPassword" />
+        <activity android:name="com.sunflower.luwe.activities.VerifyEmail" />
+        <activity android:name="com.sunflower.luwe.activities.Signup" />
+        <activity android:name="com.sunflower.luwe.activities.Signin" />
+        <activity android:name="com.sunflower.luwe.activities.Welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
