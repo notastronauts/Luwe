@@ -25,7 +25,7 @@
     <string name="eg_phone_number">123456789</string>
     <string name="next">Next</string>
     <!-- Verify Email Activity -->
-    <string name="please_enter_verification_code">Please enter the verification code we sent to your email address </string>
+    <string name="please_enter_verification_code">Please enter the verification code we sent to your phone number </string>
     <string name="verify">Verify</string>
     <!-- Forgot Password -->
     <string name="please_enter_email_address">Please enter your email address, we will send the verification code</string>

@@ -1,14 +1,15 @@
 package com.sunflower.luwe.activities;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -21,7 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Signup extends AppCompatActivity {
+public class Signup extends AppCompatActivity{
 
     private MaterialButton sign_up;
     private TextInputLayout phone_number_container;
@@ -52,8 +53,6 @@ public class Signup extends AppCompatActivity {
 
             }
         });
-
-
     }
 
 
@@ -105,7 +104,7 @@ public class Signup extends AppCompatActivity {
                     public void onResponse(Call<ResponsePhoneNumberVerification> call, Response<ResponsePhoneNumberVerification> response) {
                         if (response.isSuccessful()) {
                             ResponsePhoneNumberVerification responsePhoneNumberVerification = response.body();
-                            Intent intent = new Intent(getApplicationContext(), VerifyEmail.class);
+                            Intent intent = new Intent(getApplicationContext(), VerifyPhoneNumber.class);
                             String extraPhoneNumber = responsePhoneNumberVerification.getPhoneNumber();
                             intent.putExtra("extraPhoneNumber", extraPhoneNumber);
                             startActivity(intent);

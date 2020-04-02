@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,10 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <receiver
+            android:name=".helpers.SmsBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVE" />
+            </intent-filter>
+        </receiver>
         <activity android:name="com.sunflower.luwe.activities.Dashboard"></activity>
         <activity android:name="com.sunflower.luwe.activities.CreateNewPassword" />
         <activity android:name="com.sunflower.luwe.activities.ForgotPassword" />
-        <activity android:name="com.sunflower.luwe.activities.VerifyEmail" />
+        <activity android:name="com.sunflower.luwe.activities.VerifyPhoneNumber" />
         <activity android:name="com.sunflower.luwe.activities.Signup" />
         <activity android:name="com.sunflower.luwe.activities.Signin" />
         <activity android:name="com.sunflower.luwe.activities.Welcome">
