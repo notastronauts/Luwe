@@ -1,4 +1,4 @@
-# FingerPrnt
+# Luwe Android App
 Android studio login register template
 
 # Dependencies that I use
