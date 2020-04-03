@@ -34,4 +34,6 @@
     <string name="create_new_password">Create a new password</string>
     <string name="your_new_password">Your new password</string>
     <string name="ok">OK</string>
+
+    <string name="step1">Step 1 : Verify Phone Number</string>
 </resources>

@@ -1,12 +1,12 @@
 package com.sunflower.luwe.activities;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -39,18 +39,20 @@ public class Signup extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 String phone_number = phone_number_field.getText().toString();
-                validatePhoneNumber(phone_number);
-                if (phone_number.substring(0, 0).equalsIgnoreCase("0")) {
-                    phone_number = phone_number.substring(0,0) + "+62" + phone_number.substring(0+1);
-                    sendCode(phone_number);
-                } else if(phone_number.substring(0, 0).equalsIgnoreCase("6")) {
-                    phone_number = phone_number.substring(0,0) + "+" + phone_number.substring(0+1);
-                    sendCode(phone_number);
+                int length = phone_number.length();
+                if (validatePhoneNumber(phone_number)) {
+                    Log.d("ChartAt", Character.toString(phone_number.charAt(0)));
+                    if (Character.toString(phone_number.charAt(0)).equalsIgnoreCase("0")) {
+                        phone_number = "+62" + phone_number.substring(1, length);
+                        sendCode(phone_number);
+                    } else if(Character.toString(phone_number.charAt(0)).equalsIgnoreCase("6")) {
+                        phone_number = "+" + phone_number;
+                        sendCode(phone_number);
+                    }
+                    else {
+                        sendCode(phone_number);
+                    }
                 }
-                else {
-                    sendCode(phone_number);
-                }
-
             }
         });
     }
@@ -89,26 +91,22 @@ public class Signup extends AppCompatActivity{
         phone_number_field = findViewById(R.id.phone_number);
     }
 
-    public void validatePhoneNumber(String phoneNumber) {
+    public boolean validatePhoneNumber(String phoneNumber) {
         if (TextUtils.isEmpty(phoneNumber)) {
             phone_number_container.setError("Nomor telpon tidak boleh kosong");
+            return false;
         }
+        return true;
     }
 
-    public void sendCode(String phone_number) {
+    public void sendCode(final String phone_number) {
         ServiceClient
                 .buildServiceClient()
                 .sendVerificationCode(new PhoneNumber(phone_number))
                 .enqueue(new Callback<ResponsePhoneNumberVerification>() {
                     @Override
                     public void onResponse(Call<ResponsePhoneNumberVerification> call, Response<ResponsePhoneNumberVerification> response) {
-                        if (response.isSuccessful()) {
-                            ResponsePhoneNumberVerification responsePhoneNumberVerification = response.body();
-                            Intent intent = new Intent(getApplicationContext(), VerifyPhoneNumber.class);
-                            String extraPhoneNumber = responsePhoneNumberVerification.getPhoneNumber();
-                            intent.putExtra("extraPhoneNumber", extraPhoneNumber);
-                            startActivity(intent);
-                        }
+
                     }
 
                     @Override
@@ -116,5 +114,8 @@ public class Signup extends AppCompatActivity{
 
                     }
                 });
+        Intent intent = new Intent(getApplicationContext(), VerifyPhoneNumber.class);
+        intent.putExtra("extraPhoneNumber", phone_number);
+        startActivity(intent);
     }
 }

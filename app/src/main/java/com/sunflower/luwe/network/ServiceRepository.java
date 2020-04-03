@@ -6,6 +6,7 @@ import com.sunflower.luwe.model.Credentials;
 import com.sunflower.luwe.model.PhoneNumber;
 import com.sunflower.luwe.model.ResponsePhoneNumberVerification;
 import com.sunflower.luwe.model.UserResponse;
+import com.sunflower.luwe.model.Verify;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -36,4 +37,7 @@ public interface ServiceRepository {
 
     @POST("/api/send-verification-code")
     Call<ResponsePhoneNumberVerification> sendVerificationCode(@Body PhoneNumber phone_number);
+
+    @POST("/api/verify-phone-number")
+    Call<Void> verifyPhoneNumber(@Body Verify verify);
 }
